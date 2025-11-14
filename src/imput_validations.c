@@ -29,3 +29,6 @@ int	is_number(char *str)
 	}
 	return (1);
 }
+
+
+verificar que sea número, que no este repetido, que no este en orden, que pille numeros negativos positivos, que no haya 0 negativo, o dos -- seguidos, gestion de errores
