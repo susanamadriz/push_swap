@@ -6,7 +6,7 @@
 /*   By: susanamadriz <susanamadriz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 19:51:11 by sjuan-ma          #+#    #+#             */
-/*   Updated: 2025/11/12 22:26:41 by susanamadri      ###   ########.fr       */
+/*   Updated: 2025/11/16 23:12:40 by susanamadri      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,15 @@ int	is_number(char *str)
 		i++;
 	}
 	return (1);
+}
+
+int	is_duplicate(t_stack *a, int n)
+{
+	while (a)
+	{
+		if (a->value == n)
+			return (1);
+		a = a->next;
+	}
+	return (0);
 }
