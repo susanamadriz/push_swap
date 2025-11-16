@@ -6,7 +6,7 @@
 /*   By: susanamadriz <susanamadriz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 19:51:11 by sjuan-ma          #+#    #+#             */
-/*   Updated: 2025/11/16 23:12:40 by susanamadri      ###   ########.fr       */
+/*   Updated: 2025/11/16 23:39:10 by susanamadri      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,6 @@ int	is_duplicate(t_stack *a, int n)
 	}
 	return (0);
 }
+
+
+verificar que sea número, que no este repetido, que no este en orden, que pille numeros negativos positivos, que no haya 0 negativo, o dos -- seguidos, gestion de errores
