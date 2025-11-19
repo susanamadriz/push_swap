@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: susanamadriz <susanamadriz@student.42.f    +#+  +:+       +#+        */
+/*   By: sjuan-ma <sjuan-ma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 19:51:11 by sjuan-ma          #+#    #+#             */
-/*   Updated: 2025/11/09 23:09:03 by susanamadri      ###   ########.fr       */
+/*   Updated: 2025/11/19 18:30:54 by sjuan-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	main(int argc, char **argv)
 		free_all(&a, &b);
 		return (0);
 	}
+	order(&a, &b);
 	free_all(&a, &b);
 	return (0);
 }
