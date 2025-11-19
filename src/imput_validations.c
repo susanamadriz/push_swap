@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   imput_validations.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: susanamadriz <susanamadriz@student.42.f    +#+  +:+       +#+        */
+/*   By: sjuan-ma <sjuan-ma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 19:51:11 by sjuan-ma          #+#    #+#             */
-/*   Updated: 2025/11/16 23:39:10 by susanamadri      ###   ########.fr       */
+/*   Updated: 2025/11/19 18:55:20 by sjuan-ma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,20 @@ int	is_duplicate(t_stack *a, int n)
 }
 
 
-verificar que sea número, que no este repetido, que no este en orden, que pille numeros negativos positivos, que no haya 0 negativo, o dos -- seguidos, gestion de errores
+
+validate_args(int argc,char argv, &a)
+{
+	int i;
+
+	i = 0;
+	while (argv[i])
+	{
+		if (!is_number(argv[i]))
+			return (1);
+		if (is_duplicate(argv[1]))
+			return (1);
+	}
+	return (0);
+}
+
+// verificar que sea número, que no este repetido, que no este en orden, que pille numeros negativos positivos, que no haya 0 negativo, o dos -- seguidos, gestion de errores
