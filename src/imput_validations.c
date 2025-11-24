@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   imput_validations.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sjuan-ma <sjuan-ma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: susanamadriz <susanamadriz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 19:51:11 by sjuan-ma          #+#    #+#             */
-/*   Updated: 2025/11/19 18:55:20 by sjuan-ma         ###   ########.fr       */
+/*   Updated: 2025/11/24 23:56:50 by susanamadri      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
