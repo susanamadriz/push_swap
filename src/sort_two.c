@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_all.c                                         :+:      :+:    :+:   */
+/*   sort_two.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: susanamadriz <susanamadriz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 19:51:11 by sjuan-ma          #+#    #+#             */
-/*   Updated: 2025/11/24 23:59:30 by susanamadri      ###   ########.fr       */
+/*   Updated: 2025/11/25 00:04:29 by susanamadri      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_all(t_stack **a, t_stack **b)
+void	sort_two(t_stack **a)
 {
-	free_stack(a);
-	free_stack(b);
+	if ((*a)->value > (*a)->next->value)
+	{
+		// swap
+		int temp = (*a)->value;
+		(*a)->value = (*a)->next->value;
+		(*a)->next->value = temp;
+		write(1, "sa\n", 3);
+	}
 }

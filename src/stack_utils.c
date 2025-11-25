@@ -3,40 +3,54 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sjuan-ma <sjuan-ma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: susanamadriz <susanamadriz@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 19:51:11 by sjuan-ma          #+#    #+#             */
-/*   Updated: 2025/11/19 18:49:24 by sjuan-ma         ###   ########.fr       */
+/*   Updated: 2025/11/25 00:00:50 by susanamadri      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *str)
+int	is_sorted(t_stack *a)
 {
-	int	i;
-	int	sign;
-	int	conversion;
+	while (a && a->next)
+	{
+		if (a->value > a->next->value)
+			return (0);
+		a = a->next;
+	}
+	return (1);
+}
 
-	i = 0;
-	sign = 1;
-	conversion = 0;
-	if (((int)str < -2147483648) || ((int)str > 2147483647))
-		return (-1);
-	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '+')
-		i++;
-	else if (str[i] == '-')
+t_stack	*stack_new(int value)
+{
+	t_stack *new = malloc(sizeof(t_stack));
+	new->value = value;
+	new->next = NULL;
+	return (new);
+}
+
+void	stack_add_back(t_stack **stack, t_stack *new)
+{
+	t_stack *tmp = *stack;
+	if (!tmp)
 	{
-		sign = -1;
-		i++;
+		*stack = new;
+		return;
 	}
-	while ((str[i] != '\0') && ((str[i] >= '0') && (str[i] <= '9')))
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = new;
+}
+
+void	free_stack(t_stack **stack)
+{
+	t_stack *tmp;
+	while (*stack)
 	{
-		conversion = conversion * 10;
-		conversion = conversion + str[i] - '0';
-		i++;
+		tmp = (*stack)->next;
+		free(*stack);
+		*stack = tmp;
 	}
-	return (conversion * sign);
 }
